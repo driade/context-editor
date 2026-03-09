@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="ContextEditor/Assets.xcassets/AppIcon.appiconset/icon_512x512.png" alt="ContextEditor icon" width="128">
+</p>
+
 # ContextEditor
 
 ContextEditor is a macOS app that routes text and source files to different editors depending on the current project.
