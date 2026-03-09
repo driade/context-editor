@@ -1,26 +1,35 @@
 import AppKit
 import Foundation
+import OSLog
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    private let logger = Logger(subsystem: "com.driade.contexteditor", category: "routing")
     private lazy var resolver = EditorResolver(
         appLocator: resolveApplicationURL(for:),
         systemDefaultLocator: systemDefaultApplication(for:)
     )
     private var didReceiveOpenRequest = false
+    private var launchTerminationWorkItem: DispatchWorkItem?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
 
         // When launched directly, this app should exit instead of idling in the background.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        let workItem = DispatchWorkItem { [weak self] in
+            guard let self else { return }
             if !self.didReceiveOpenRequest {
+                self.logger.debug("No files were received after launch; terminating.")
                 NSApp.terminate(nil)
             }
         }
+        launchTerminationWorkItem = workItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: workItem)
     }
 
     func application(_ application: NSApplication, open urls: [URL]) {
         didReceiveOpenRequest = true
+        launchTerminationWorkItem?.cancel()
+        logger.debug("Received \(urls.count, privacy: .public) file(s) to open.")
 
         for fileURL in urls {
             do {
@@ -39,9 +48,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             let name = resolvedTarget.appName ?? resolvedTarget.bundleIdentifier ?? "unknown"
             throw ConfigError.appNotInstalled(name)
         }
+
+        logger.debug(
+            "Opening \(fileURL.path, privacy: .public) with \(appURL.lastPathComponent, privacy: .public)."
+        )
+
         let process = Process()
         process.executableURL = URL(fileURLWithPath: "/usr/bin/open")
-        process.arguments = ["-a", appURL.path, fileURL.path]
+        process.arguments = ["-a", appURL.path, "--", fileURL.path]
         try process.run()
         process.waitUntilExit()
 
