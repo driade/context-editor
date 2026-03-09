@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16860B7C14D9810E924DB898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B22C44F629A21BCBEF6C79 /* Assets.xcassets */; };
+		24B3387BDDD88766D489ACCF /* EditorResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7E72FF2D24D32CD04BA0F /* EditorResolver.swift */; };
+		C3D54D77D7E5F625B55494AF /* ContextEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788B912023D69ABCFFA7CB7 /* ContextEditorTests.swift */; };
+		CCB397D563EBB0DAE86B833E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1E8D2AD181F3E9CE36489 /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5DAE8B57CBC9D91AE3ADDF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82726776229D0AE9C33BE83F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AC92662DE49FD4E1E56E454;
+			remoteInfo = ContextEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A9F34A73D4246A878157EA1 /* ContextEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContextEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B22C44F629A21BCBEF6C79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A788B912023D69ABCFFA7CB7 /* ContextEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextEditorTests.swift; sourceTree = "<group>"; };
+		B031FE4F7B3A5D8D0CFD9921 /* ContextEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContextEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A415BBAA19FA3BE60A3BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DBA1E8D2AD181F3E9CE36489 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E0C7E72FF2D24D32CD04BA0F /* EditorResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorResolver.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		059F20DDA7ADFC8C7D6B8C37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B031FE4F7B3A5D8D0CFD9921 /* ContextEditor.app */,
+				4A9F34A73D4246A878157EA1 /* ContextEditorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		440FC5D5C188E1AD042DAB35 /* ContextEditor */ = {
+			isa = PBXGroup;
+			children = (
+				54B22C44F629A21BCBEF6C79 /* Assets.xcassets */,
+				E0C7E72FF2D24D32CD04BA0F /* EditorResolver.swift */,
+				B7A415BBAA19FA3BE60A3BA2 /* Info.plist */,
+				DBA1E8D2AD181F3E9CE36489 /* main.swift */,
+			);
+			path = ContextEditor;
+			sourceTree = "<group>";
+		};
+		51520084E7B8B122DEB95D33 /* ContextEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A788B912023D69ABCFFA7CB7 /* ContextEditorTests.swift */,
+			);
+			path = ContextEditorTests;
+			sourceTree = "<group>";
+		};
+		98941C230669126474612952 = {
+			isa = PBXGroup;
+			children = (
+				440FC5D5C188E1AD042DAB35 /* ContextEditor */,
+				51520084E7B8B122DEB95D33 /* ContextEditorTests */,
+				059F20DDA7ADFC8C7D6B8C37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AC92662DE49FD4E1E56E454 /* ContextEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0B3B00EE7AFEB5DB679F44D /* Build configuration list for PBXNativeTarget "ContextEditor" */;
+			buildPhases = (
+				7ECC36ABAD2D949EC353E9CB /* Sources */,
+				5CE27DB4858FD3B9674CEC4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContextEditor;
+			packageProductDependencies = (
+			);
+			productName = ContextEditor;
+			productReference = B031FE4F7B3A5D8D0CFD9921 /* ContextEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A6B1E61B0805D7D1818BFE9 /* ContextEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFF093BD8419CF9945C9178C /* Build configuration list for PBXNativeTarget "ContextEditorTests" */;
+			buildPhases = (
+				76C270DE545729BEDC0B1F05 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B5C8C8719591EE3A8DBEBD0 /* PBXTargetDependency */,
+			);
+			name = ContextEditorTests;
+			packageProductDependencies = (
+			);
+			productName = ContextEditorTests;
+			productReference = 4A9F34A73D4246A878157EA1 /* ContextEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82726776229D0AE9C33BE83F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2AC92662DE49FD4E1E56E454 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4FB13F630C155A66BF2DD8B8 /* Build configuration list for PBXProject "ContextEditor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 98941C230669126474612952;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 059F20DDA7ADFC8C7D6B8C37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AC92662DE49FD4E1E56E454 /* ContextEditor */,
+				5A6B1E61B0805D7D1818BFE9 /* ContextEditorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CE27DB4858FD3B9674CEC4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16860B7C14D9810E924DB898 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76C270DE545729BEDC0B1F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D54D77D7E5F625B55494AF /* ContextEditorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECC36ABAD2D949EC353E9CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B3387BDDD88766D489ACCF /* EditorResolver.swift in Sources */,
+				CCB397D563EBB0DAE86B833E /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B5C8C8719591EE3A8DBEBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AC92662DE49FD4E1E56E454 /* ContextEditor */;
+			targetProxy = B5DAE8B57CBC9D91AE3ADDF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1CB0B4452B6EF955D0731DE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.driade.contexteditor.tests;
+				PRODUCT_MODULE_NAME = ContextEditorTests;
+				PRODUCT_NAME = ContextEditorTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContextEditor.app/Contents/MacOS/ContextEditor";
+			};
+			name = Release;
+		};
+		404864DB08BE1012B8F6E6D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.driade.contexteditor.tests;
+				PRODUCT_MODULE_NAME = ContextEditorTests;
+				PRODUCT_NAME = ContextEditorTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContextEditor.app/Contents/MacOS/ContextEditor";
+			};
+			name = Debug;
+		};
+		4CF5B380BE47DCC72707441A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ContextEditor;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4DEFC4C7DC2695C8A74195AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ContextEditor/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.driade.contexteditor;
+				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = Debug;
+		};
+		50C4FB5EEFF19F25C11F051D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ContextEditor/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.driade.contexteditor;
+				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = Release;
+		};
+		E301CE758076C814F6BF1389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = ContextEditor;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FB13F630C155A66BF2DD8B8 /* Build configuration list for PBXProject "ContextEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CF5B380BE47DCC72707441A /* Debug */,
+				E301CE758076C814F6BF1389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B0B3B00EE7AFEB5DB679F44D /* Build configuration list for PBXNativeTarget "ContextEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEFC4C7DC2695C8A74195AD /* Debug */,
+				50C4FB5EEFF19F25C11F051D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FFF093BD8419CF9945C9178C /* Build configuration list for PBXNativeTarget "ContextEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404864DB08BE1012B8F6E6D8 /* Debug */,
+				1CB0B4452B6EF955D0731DE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82726776229D0AE9C33BE83F /* Project object */;
+}

@@ -1,0 +1,42 @@
+name: Build ContextEditor
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build app
+        run: ./scripts/build_universal.sh
+
+      - name: Package app
+        run: ditto -c -k --sequesterRsrc --keepParent build-universal/output/ContextEditor.app ContextEditor-macOS.zip
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ContextEditor-macOS
+          path: ContextEditor-macOS.zip
+
+      - name: Publish release asset
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ContextEditor-macOS.zip

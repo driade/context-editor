@@ -1,0 +1,39 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="112" x2="900" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9ECFF"/>
+      <stop offset="1" stop-color="#75B8F7"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="244" y1="170" x2="760" y2="854" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EAF1F8"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="632" y1="196" x2="806" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8E6F3"/>
+      <stop offset="1" stop-color="#BCD0E2"/>
+    </linearGradient>
+    <filter id="shadow" x="142" y="144" width="748" height="772" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="26"/>
+      <feGaussianBlur stdDeviation="28"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.1 0 0 0 0 0.22 0 0 0 0 0.36 0 0 0 0.18 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect x="96" y="96" width="832" height="832" rx="188" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <path d="M260 170H626L772 316V730C772 796.274 718.274 850 652 850H260C193.726 850 140 796.274 140 730V290C140 223.726 193.726 170 260 170Z" fill="url(#paper)"/>
+    <path d="M626 170V266C626 332.274 679.726 386 746 386H842L626 170Z" fill="url(#fold)"/>
+    <path d="M260 170H626L772 316V730C772 796.274 718.274 850 652 850H260C193.726 850 140 796.274 140 730V290C140 223.726 193.726 170 260 170Z" stroke="#5A86B3" stroke-width="26"/>
+
+    <rect x="228" y="344" width="274" height="66" rx="33" fill="#2A94E6"/>
+    <rect x="228" y="460" width="448" height="56" rx="28" fill="#8DA4BA"/>
+    <rect x="228" y="558" width="392" height="56" rx="28" fill="#8DA4BA"/>
+    <rect x="228" y="656" width="298" height="56" rx="28" fill="#8DA4BA"/>
+    <rect x="570" y="638" width="42" height="128" rx="21" fill="#0F6BBD"/>
+  </g>
+</svg>

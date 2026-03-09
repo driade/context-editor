@@ -1,0 +1,40 @@
+name: ContextEditor
+options:
+  bundleIdPrefix: com.driade
+  deploymentTarget:
+    macOS: "13.0"
+settings:
+  base:
+    PRODUCT_NAME: ContextEditor
+    SWIFT_VERSION: "5.0"
+    GENERATE_INFOPLIST_FILE: NO
+targets:
+  ContextEditor:
+    type: application
+    platform: macOS
+    sources:
+      - ContextEditor
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.driade.contexteditor
+        INFOPLIST_FILE: ContextEditor/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Automatic
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 0.1.0
+        ENABLE_HARDENED_RUNTIME: YES
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.developer-tools
+        SUPPORTS_MACCATALYST: NO
+  ContextEditorTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - ContextEditorTests
+    dependencies:
+      - target: ContextEditor
+    settings:
+      base:
+        PRODUCT_NAME: ContextEditorTests
+        PRODUCT_MODULE_NAME: ContextEditorTests
+        PRODUCT_BUNDLE_IDENTIFIER: com.driade.contexteditor.tests
+        GENERATE_INFOPLIST_FILE: YES
