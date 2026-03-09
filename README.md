@@ -47,7 +47,7 @@ Supported values:
 
 Prebuilt binaries are available from the [Releases](https://github.com/driade/context-editor/releases) page.
 
-The initial public release is `v0.1.0`.
+The current public release is `v0.1.1`.
 
 ## Build
 
