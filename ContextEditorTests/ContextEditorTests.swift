@@ -58,6 +58,26 @@ final class ContextEditorTests: XCTestCase {
         }
     }
 
+    func testResolveTargetApplicationRejectsMalformedConfiguration() throws {
+        let root = makeTemporaryDirectory()
+        defer { try? FileManager.default.removeItem(at: root) }
+
+        let projectRoot = root.appendingPathComponent("project")
+        try FileManager.default.createDirectory(at: projectRoot, withIntermediateDirectories: true)
+        try "{".write(
+            to: projectRoot.appendingPathComponent(".contexteditor"),
+            atomically: true,
+            encoding: .utf8
+        )
+
+        let fileURL = projectRoot.appendingPathComponent("index.txt")
+        try "".write(to: fileURL, atomically: true, encoding: .utf8)
+
+        let resolver = EditorResolver()
+
+        XCTAssertThrowsError(try resolver.resolveTargetApplication(for: fileURL))
+    }
+
     func testFallbackReturnsFirstInstalledEditor() {
         let resolver = EditorResolver { target in
             if target == TargetApplication(appName: "Nova", bundleIdentifier: "com.panic.Nova") {
@@ -100,6 +120,19 @@ final class ContextEditorTests: XCTestCase {
             resolver.targetApplication(for: "My Custom Editor"),
             TargetApplication(appName: "My Custom Editor", bundleIdentifier: nil)
         )
+    }
+
+    func testResolveTargetApplicationThrowsWhenNoConfigurationOrFallbackExists() {
+        let resolver = EditorResolver(
+            appLocator: { _ in nil },
+            systemDefaultLocator: { _ in nil }
+        )
+
+        XCTAssertThrowsError(
+            try resolver.resolveTargetApplication(for: URL(fileURLWithPath: "/tmp/example.txt"))
+        ) { error in
+            XCTAssertEqual(error as? ConfigError, .missingConfiguration)
+        }
     }
 
     private func makeTemporaryDirectory() -> URL {

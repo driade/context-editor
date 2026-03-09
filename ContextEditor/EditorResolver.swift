@@ -17,7 +17,7 @@ enum ConfigError: LocalizedError, Equatable {
     var errorDescription: String? {
         switch self {
         case .missingConfiguration:
-            return "No supported editor was found and no valid editor.json file is available."
+            return "No supported editor was found and no valid .contexteditor file is available."
         case .invalidConfiguration(let url):
             return "Could not read \(url.path) as a valid configuration file."
         case .appNotInstalled(let name):
