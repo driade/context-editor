@@ -13,6 +13,12 @@ X86_PRODUCTS="$BUILD_DIR/products-x86_64"
 ARM64_APP="$ARM64_PRODUCTS/$APP_NAME"
 X86_APP="$X86_PRODUCTS/$APP_NAME"
 UNIVERSAL_APP="$OUTPUT_DIR/$APP_NAME"
+SIGNING_IDENTITY="${SIGNING_IDENTITY:-}"
+XCODEBUILD_SIGNING_ARGS=()
+
+if [[ -z "$SIGNING_IDENTITY" ]]; then
+  XCODEBUILD_SIGNING_ARGS=(CODE_SIGNING_ALLOWED=NO)
+fi
 
 rm -rf "$OUTPUT_DIR"
 mkdir -p "$OUTPUT_DIR"
@@ -24,6 +30,7 @@ xcodebuild \
   -derivedDataPath "$ARM64_DERIVED" \
   -destination "platform=macOS,arch=arm64" \
   CONFIGURATION_BUILD_DIR="$ARM64_PRODUCTS" \
+  "${XCODEBUILD_SIGNING_ARGS[@]}" \
   build
 
 xcodebuild \
@@ -33,6 +40,7 @@ xcodebuild \
   -derivedDataPath "$X86_DERIVED" \
   -destination "platform=macOS,arch=x86_64" \
   CONFIGURATION_BUILD_DIR="$X86_PRODUCTS" \
+  "${XCODEBUILD_SIGNING_ARGS[@]}" \
   build
 
 ditto "$ARM64_APP" "$UNIVERSAL_APP"
@@ -42,6 +50,10 @@ lipo -create \
   "$X86_APP/Contents/MacOS/ContextEditor" \
   -output "$UNIVERSAL_APP/Contents/MacOS/ContextEditor"
 
-codesign --force --sign - --deep --timestamp=none "$UNIVERSAL_APP"
+if [[ -n "$SIGNING_IDENTITY" ]]; then
+  codesign --force --deep --options runtime --timestamp --sign "$SIGNING_IDENTITY" "$UNIVERSAL_APP"
+else
+  codesign --force --sign - --deep --timestamp=none "$UNIVERSAL_APP"
+fi
 
 echo "Universal app created at: $UNIVERSAL_APP"

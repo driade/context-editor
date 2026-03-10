@@ -19,12 +19,19 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.driade.contexteditor
         INFOPLIST_FILE: ContextEditor/Info.plist
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-        CODE_SIGN_STYLE: Automatic
         CURRENT_PROJECT_VERSION: 2
         MARKETING_VERSION: 0.1.1
         ENABLE_HARDENED_RUNTIME: YES
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.developer-tools
         SUPPORTS_MACCATALYST: NO
+      configs:
+        Debug:
+          CODE_SIGN_STYLE: Automatic
+        Release:
+          CODE_SIGN_STYLE: Manual
+          CODE_SIGN_IDENTITY: Developer ID Application
+          CODE_SIGN_INJECT_BASE_ENTITLEMENTS: NO
+          DEVELOPMENT_TEAM: KYNN4JTWJN
   ContextEditorTests:
     type: bundle.unit-test
     platform: macOS
