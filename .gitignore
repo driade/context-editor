@@ -11,3 +11,4 @@ DerivedData/
 *.xcscmblueprint
 .contexteditor
 build-signed
+build-universal-check
