@@ -45,9 +45,18 @@ Supported values:
 
 ## Download
 
-Prebuilt binaries are available from the [Releases](https://github.com/driade/context-editor/releases) page.
+Prebuilt signed binaries are available from the [Releases](https://github.com/driade/context-editor/releases) page.
 
-The current public release is `v0.1.1`.
+The current public release is `v0.1.2`.
+
+## Homebrew
+
+```bash
+brew tap driade/context-editor
+brew install --cask contexteditor
+```
+
+This tap installs the notarized app published in GitHub Releases.
 
 ## Build
 
@@ -90,10 +99,8 @@ The test suite covers configuration lookup and editor resolution behavior.
 
 - The app is registered as an editor for common text and source-code content types through its `Info.plist`.
 - Finder associations are still controlled per file type by macOS, so you may need to use `Get Info > Open with > Change All...` for the file families you care about.
+- GitHub release builds are signed, notarized, and published automatically from version tags.
 
 ## License
 
-This project is intended to be available under a broad permissive license.
-Use, modify, distribute, and include it in commercial or private projects with attribution.
-
-Recommended license: MIT.
+MIT

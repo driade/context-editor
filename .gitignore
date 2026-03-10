@@ -3,6 +3,7 @@ docs/
 build/
 build-tests/
 build-universal/
+build-universal-check/
 DerivedData/
 *.profraw
 *.xcuserstate
