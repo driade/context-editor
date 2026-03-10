@@ -52,8 +52,8 @@ The current public release is `v0.1.2`.
 ## Homebrew
 
 ```bash
-brew tap driade/context-editor
-brew install --cask contexteditor
+brew tap driade/context-editor https://github.com/driade/context-editor
+brew install --cask driade/context-editor/contexteditor
 ```
 
 This tap installs the notarized app published in GitHub Releases.
