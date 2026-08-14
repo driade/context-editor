@@ -7,7 +7,7 @@ cask "contexteditor" do
   desc "Route text files to different editors depending on the current project"
   homepage "https://github.com/driade/context-editor"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "ContextEditor.app"
 end
